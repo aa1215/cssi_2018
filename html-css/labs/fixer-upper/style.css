@@ -27,12 +27,18 @@ body {
   padding-top: 3%;
   text-align: center;
   width: 100%;
+  font-family: 'Chela One', cursive;
 }
 
 #links {
   background-color: #Febc1f;
   height: 50px;
   text-align: center;
+  border-width: medium;
+  border-style: dotted;
+  border-color: white;
+  padding-bottom: 2%;
+  font-family: Helvetica;
 }
 
 .link {
@@ -42,4 +48,15 @@ body {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2%;
+}
+
+#info {
+  background-color: #4470E6;
+  font-size: 20px;
+  font-family: helvetica;
+  padding-top: 1%;
+  color: white;
+}
+#classmates {
+
 }
