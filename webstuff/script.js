@@ -21,11 +21,36 @@ if (age >= 15){
   console.log('Try again when you\'re 15!');
 }
 
-if (age >= 18){
-  console.log('You can get your driver\'s license and you can vote.');
-elif (age <= 18 && age >= 16){
-  console.log('You can get your license but you can\'t vote.');
-elif (age <= 16){
+
+// function time!
+function makeGreet(name1, name2){
+  if (name2 != null){
+  return 'Hello ' + name1 + ' and you too ' + name2;
+}
+else{
+  return 'Hello ' + name1;
 }
 }
+
+
+
+function greet(name1, name2){
+  if (name2 != null){
+  console.log('Hello' + ' ' + name + ' and hello to you too ' + name2 + '.');
 }
+else{
+  console.log('Hello' + ' ' + name + '.')
+}
+}
+
+greet("Akshara");
+greet("Akshara", "Cheddar")
+makeGreet("Akshara")
+makeGreet("Akshara", "Cheddar")
+
+const multiplyBy3 = (x) => x ** 3;
+console.log(multiplyBy3(2))
+
+// setInterval(() => {
+ // console.log(new Date());
+// }, 1000);
