@@ -1,0 +1,82 @@
+#header{
+  font-size: 40px;
+  font-family: 'Gaegu', cursive;
+  font-weight: normal;
+  background-color: powderblue;
+  margin: 1px;
+  text-align: center;
+}
+
+#navigation{
+  background-color: white;
+  border-color: powderblue;
+  text-align: right;
+  font-family: sans-serif;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* boxes in rows or columns? */
+  flex-direction: row;
+  height: 100vh;
+}
+
+.container div {
+  border: 1px solid powderblue;
+  padding: 20px 10px 20px 10px;
+  margin: 10px;
+
+}
+
+#qualifications{
+  font-family: sans-serif;
+  margin: 10px;
+  padding: 20px 10px 20px 10px;
+  border: 1 px solid powderblue;
+}
+
+#title {
+  font-size: 40px;
+  font-family: 'Gaegu', cursive;
+  background-color: powderblue;
+  margin: 30px;
+  text-align: center;
+}
+
+#list{
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+#fav{
+  font-size: 40px;
+  font-family: 'Gaegu', cursive;
+  background-color: white;
+  border-style: dashed;
+  border-width: medium;
+  border-color: powderblue;
+  text-align: center;
+}
+
+.container1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* boxes in rows or columns? */
+  flex-direction: row;
+  
+}
+
+.container1 div {
+  padding: 20px 10px 20px 10px;
+  margin: 10px;
+
+}
+
+#list{
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  text-align: left;
+}

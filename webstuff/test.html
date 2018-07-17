@@ -23,9 +23,57 @@
 
       }
 
+      .container {
+        background-color: white;
+        grid-gap: 4px;
+        display: grid;
+        grid-template-columns: 1fr 3fr auto 4fr;
+        grid-template-rows: 3fr 1fr auto 1fr;
+      }
+
+      /*  flex helps you layout content*/
+
+      .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* boxes in rows or columns? */
+        flex-direction: row;
+        height: 100vh;
+      }
+
+      .container div {
+        border: 1px dotted red;
+        background: #DDD;
+        padding: 20px 10px 20px 10px;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .container div.embiggen {
+        width: 200px;
+        height: 150px;
+      }
+
     </style>
   </head>
   <body>
+    <div class = "container">
+      <div class="embiggen">Picture</div>
+      <div style="background-color: red; grid-column: 1 / span 2; grid-row: 1 / span 2">Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+      <div>Picture</div>
+    </div>
 
     <div class = "title" style="background: grey;">This is a div</div>
 
