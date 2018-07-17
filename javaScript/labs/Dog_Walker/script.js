@@ -17,17 +17,39 @@ let dogName1 = "Steve";
 let dogType1 = "beagle";
 
 // Complete Task 1 Below
-
+console.log('I will walk ' + dogName1 + ' today at 12:00 pm')
 
 
 let dogName2 = "Joe";
 let dogType2 = "bulldog";
 
 // Complete Task 2 Below
-
+if (dogType2 == "corgi"){
+  console.log('I will walk ' + dogType2 + ' today at 12:00 pm.')
+}
+else {
+  console.log('I will walk ' + dogType2 + ' today at 1:00 pm.')
+}
 
 
 let dogName = "Lola";
 let dogType = "poodle";
 
 // Complete Task 3 Below
+if (dogType == "corgi" || dogType == "beagle"){
+  console.log('I will walk ' + dogName + ' today at 12:00 pm')
+}
+else if (dogType == "bulldog"){
+  console.log('I will walk ' + dogName + ' today at 1:00 pm')
+}
+else {
+  console.log('I will walk ' + dogName + ' today at 2:00 pm.')
+}
+
+let faveDog = "Alaska";
+if (faveDog == "Spike" || faveDog == "Jeremy" || faveDog == "Lola" || faveDog == "Peaches"|| faveDog == "Steve"){
+  console.log('I will walk ' + faveDog + ' , one of my favorite dogs, today at 12 pm.')
+}
+else{
+  console.log('I will walk this not-favorite dog, ' + faveDog + ', at 1pm today.')
+}
