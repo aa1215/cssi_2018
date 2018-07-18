@@ -54,3 +54,23 @@ console.log(multiplyBy3(2))
 // setInterval(() => {
  // console.log(new Date());
 // }, 1000);
+
+//array names should be plural so people know when they see the variable it's an array
+const names = ['Alice', 'Bob', 'Charlie', 'Dave']
+for (let i = 0; i < 4; i++){
+  console.log(names[i]);
+}
+
+
+let count = 0;
+while(count < 5) {
+  count ++;
+  console.log(count);
+}
+
+for (x in names){
+  console.log(names[x]);
+}
+names.forEach((name) => {
+  console.log(`forEach: ${name}`);
+});

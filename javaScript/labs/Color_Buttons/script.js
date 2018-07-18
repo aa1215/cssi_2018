@@ -13,9 +13,64 @@
 // limitations under the License.
 
 // Use querySelector to store the div in a variable.
+
+//red button
 let redButton = document.querySelector('#red');
 
-// Use addEventListener to respond to a click event.
 redButton.addEventListener('click', e => {
   console.log("You clicked the red button!");
 })
+
+redButton.addEventListener('click', e => {
+  responseBox.style.backgroundColor = "red";
+})
+
+redButton.addEventListener('click', e => {
+  responseBox.innerText = "red";
+})
+
+// green button (e is the same thing as having (), nothing but a placeholder)
+
+let greenButton = document.querySelector('#green');
+
+greenButton.addEventListener('click', e => {
+  console.log("You clicked the green button!");
+})
+
+greenButton.addEventListener('click', e => {
+  responseBox.style.backgroundColor = "green";
+})
+
+greenButton.addEventListener('click', e => {
+  responseBox.innerText = "green";
+})
+
+//blue button
+
+let blueButton = document.querySelector('#blue');
+
+blueButton.addEventListener('click', e => {
+  console.log("You clicked the blue button!");
+})
+
+blueButton.addEventListener('click', e => {
+  responseBox.style.backgroundColor = "blue";
+})
+
+blueButton.addEventListener('click', e => {
+  responseBox.innerText = "blue";
+})
+
+blueButton.addEventListener('onmouseover', e => {
+  responseBox.innerText = "powderblue";
+})
+
+// function makeGreetingMessage(n1, n2){
+//   n1 = "Alice";
+//   n2 = "Bob";
+//   if (name2 != null){
+//     return 'Hello ' + n1 + ' and ' + n2;
+//   } else {
+//     return 'Hello ' + n1
+//   }
+// }

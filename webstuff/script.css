@@ -1,0 +1,8 @@
+.likeButton {
+  /* transition is css for animation, this sets it to 400 ms */
+  transition: 4000ms all;
+}
+
+#responseBox{
+  font-size: 300px;
+}
