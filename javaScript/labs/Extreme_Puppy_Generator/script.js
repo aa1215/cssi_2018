@@ -13,3 +13,17 @@
 // limitations under the License.
 
 console.log(dataObject);
+
+// need .firstButton because it's a class
+let firstButton = document.querySelector('.firstButton');
+let firsturl;
+let img1;
+
+firstButton.addEventListener('click', () => {
+  firsturl = dataObject.data["0"].images.original.url;
+  console.log(firsturl);
+  img1 = document.createElement('img');
+  img1.src = firsturl;
+  console.log(img1);
+  document.body.appendChild(img1);
+})

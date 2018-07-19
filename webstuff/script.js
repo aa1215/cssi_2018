@@ -74,3 +74,68 @@ for (x in names){
 names.forEach((name) => {
   console.log(`forEach: ${name}`);
 });
+
+//object literal
+const article = {
+  name: 'Dog family gives birth to litter of 10 puppies',
+  views: 1234,
+  datePublished: '03/05/2018',
+  author: 'Akshara',
+  dogAuthor: {
+    name: 'Cheddar the Corgi',
+    breed: 'corgi',
+    title: 'Senior Canine Editor'
+  }
+}
+
+
+
+article.name = 'Cheddar';
+article['name'] = 'Jake';
+article.dogAuthor.breed = 'corgi pup';
+
+const pup = {
+  pups: [{
+    name: 'Tyrone',
+    breed: 'terrier',
+    sex: 'm',
+  },
+  {
+    name: 'Pesto',
+    breed: 'pug',
+    sex: 'm',
+  },
+{
+    name: 'Timothy',
+    breed: 'corgi',
+    sex: 'm',
+  }],
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const floatingBox = document.querySelector('.floatingBox');
+  let boxTop = 100;
+  let boxLeft = 100;
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  //top left coordinate is (0,0)
+  if (key == 'ArrowDown'){
+    boxTop += 5;
+  }
+  else if (key == 'ArrowUp'){
+    boxTop -= 5;
+  }
+  else if (key == 'ArrowRight'){
+    boxLeft += 5;
+  }
+    else if (key == 'ArrowLeft'){
+      boxLeft -= 5;
+  } else {
+    return;
+  }
+
+  floatingBox.style.top = boxTop + 'px';
+  floatingBox.style.left = boxLeft + 'px';
+  console.log(event);
+});
+});

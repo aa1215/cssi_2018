@@ -6,3 +6,13 @@
 #responseBox{
   font-size: 300px;
 }
+
+.floatingBox{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 100px;
+  top: 100px;
+  transition: 400ms all;
+  background-color: powderblue;
+}
