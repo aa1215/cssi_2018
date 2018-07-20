@@ -29,3 +29,13 @@ inside_movie = {
 # Write your code below to update the information in accordance with its
 # IMDB page: http://www.imdb.com/title/tt2096673/
 
+# inACCURATE VALUES:
+# year: shoudl be 2015
+# score: 8.2
+# reviews: 489,496
+inside_movie["year_released"] = 2015
+inside_movie["score"] = 8.2
+inside_movie["reviews"] = 489496
+inside_movie.pop("out_of")
+inside_movie["genres"] = ['Animation', 'Adventure', 'Comedy', 'Drama', 'Family', 'Fantasy']
+print(inside_movie)

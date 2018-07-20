@@ -40,3 +40,19 @@ def nextOne(x):
     return x - 2
 
 print(nextOne(4))
+
+# below is pep 257
+"""Prints out a person's name.
+
+This function prints out a person's name. Nothing special.
+
+Args:
+    first: (str) The person's first name
+    last_name: (str) The person's last name
+    middle_name: (str) Optional. The person's middle name
+Returns:
+    (str) The string of the person's name.
+"""
+def print_person(first, last_name, middle_name=None):
+    middle_name = middle_name or ''
+    print('{f} {m} {l}'.format(f=first,m=middle_name,l=last_name))
