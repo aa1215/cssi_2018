@@ -39,4 +39,8 @@ def get_highest_words(counts_dictionary, count):
 content = read_process_data()
 
 # Write your solution below!
-
+word_count = {}
+print(word_count)
+words = content.split(" ")
+for word in words:
+    word_count[word] = words.count(word)
