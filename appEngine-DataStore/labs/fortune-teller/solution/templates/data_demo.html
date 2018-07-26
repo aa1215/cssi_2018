@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    form{
+      color: steelblue;
+      font-size: 20px;
+      font-family: Helvetica;
+    }
+    h1{
+      font-family: Helvetica;
+      background-color: powderblue;
+      font-size: 40px;
+      text-align: center;
+    }
+    h2{
+      font-family: Helvetica;
+      background-color: powderblue;
+      font-size: 30px;
+      text-align: center;
+      font-weight: lighter;
+    }
+  </style>
+  <h1> Movie Database </h1>
+</head>
+
+<body>
+<form method="POST">
+  Title:      <input type="text" name="movie_title"><br>
+  Runtime:    <input type="text" name="movie_runtime"><br>
+  Rating:     <input type ="text" name="movie_rating"><br>
+  Year:       <input type = "text" name="movie_year"><br>
+  <input type = "submit" value="Save Movie">
+</form>
+
+{% for movie in movies %}
+<form method="POST" action="/delete">
+  <input type="submit" value="Delete this Movie">
+  {{ movie.title }}
+
+  <input type="hidden" name="movie_id" value="{{movie.key.id()}}">
+</form>
+
+<form method="GET" action="/update">
+  <input type="submit" value="Update this Movie">
+  <input type="text" name="movie_title"><br>
+
+  <input type="hidden" name="movie_id" value="{{movie.key.id()}}">
+</form>
+{% endfor %}
+
+
+</body>
+</html>

@@ -40,6 +40,7 @@ class LoadDataHandler(webapp2.RequestHandler):
         seed_data()
 
 
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/houses', HouseHandler),

@@ -13,6 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import requests
 
 ingredients = []
 
@@ -26,3 +27,19 @@ recipe = input("What kind of recipe do you want to find?")
 
 # Write your code below!
 
+api_string = 'http://www.recipepuppy.com/api/?i={ingredients}&q={recipe_type}'
+
+print(ingredients)
+
+ingredients_string = ','.join(ingredients)
+
+new_string = api_string.format(ingredients=ingredients_string, recipe_type=recipe)
+
+print(new_string)
+
+r = requests.get(new_string)
+# print(r.status_code)
+# print(r.json()['results'])
+# print(r.json()['results'][0])
+for recipe in r.json()['results']:
+    print(recipe['title'])

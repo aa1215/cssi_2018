@@ -12,24 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-application: fortune-teller
-version: 1
+#app.yaml
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: true
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
-
-#static directories should go ABOVE the catch all url (.*)
-- url: .*
+- url: /.*
   script: main.app
 
 libraries:
 - name: webapp2
-  version: "2.5.2"
-#add jinja2 here, remember in .yaml files, every white space is important
+  version: latest
 - name: jinja2
   version: latest

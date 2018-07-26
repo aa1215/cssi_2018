@@ -34,6 +34,8 @@ import webapp2
 import os
 import jinja2
 import random
+from model import Movie
+from google.appengine.ext import db
 
 
 def get_fortune():
@@ -67,8 +69,52 @@ class FortuneHandler(webapp2.RequestHandler):
         #astro_sign = request.form.get('user_astrological_sign')
         self.response.write(end_template.render(my_dict))
 
+class DemoDataHandler(webapp2.RequestHandler):
+    def get(self):
+        data = {'movies': Movie.query().fetch()}
+        data_template=jinja_current_directory.get_template("templates/data_demo.html")
+        self.response.write(data_template.render(data))
+
+    def post(self):
+        title = self.request.get('movie_title')
+        runtime = int(self.request.get('movie_runtime'))
+        rating = float(self.request.get('movie_rating'))
+        year = int(self.request.get('movie_year'))
+        my_movie = Movie(title=title, runtime=runtime, rating=rating, year=year)
+        my_movie.put()
+        self.get()
+
+        #
+        # q = Movie.query()
+        # results = q.fetch()
+        # for x in results:
+        #     self.response.write(' {m} <br>'.format(m=x.title))
+
+
+class TestDataHandler(webapp2.RequestHandler):
+    def get(self):
+        test_movie = Movie(title="Bill and Ted", runtime=90, rating=10.0)
+        test_movie.put()
+
+class DataDeleteHandler(webapp2.RequestHandler):
+    def post(self):
+        movie_id = self.request.get('movie_id')
+        movie_to_delete = Movie.get_by_id(int(movie_id))
+        # print movie_to_delete
+        movie_to_delete.key.delete()
+
+class UpdateDataHandler(webapp2.RequestHandler):
+    def get(self):
+
+        change = key.get()
+        test_movie = Movie(title="Bill and Ted", runtime=90, rating=10.0)
+        test_movie.put()
 
 
 app = webapp2.WSGIApplication([
-    ('/', FortuneHandler)
+    ('/', FortuneHandler),
+    ('/datademo', DemoDataHandler),
+    ('/test', TestDataHandler),
+    ('/delete', DataDeleteHandler),
+    ('/update', UpdateDataHandler)
 ], debug=True)
